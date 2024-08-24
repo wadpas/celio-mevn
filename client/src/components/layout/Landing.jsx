@@ -1,23 +1,23 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Landing = () => {
 	return (
 		<section className="landing">
 			<div className="dark-overlay">
 				<div className="landing-inner">
-					<h1 className="x-large">Developer Connector</h1>
+					<h1 className="x-large">SLICE</h1>
 					<p className="lead">Create a developer portfolio, share posts and help from other developers</p>
 					<div className="buttons">
-						<a
-							href="register.html"
+						<Link
+							to="/register"
 							className="btn btn-primary">
 							Sign Up
-						</a>
-						<a
-							href="login.html"
+						</Link>
+						<Link
+							to="/login"
 							className="btn btn-light">
 							Login
-						</a>
+						</Link>
 						<img
 							src="./img/showcase.jpg"
 							alt=""
