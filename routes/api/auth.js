@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
 		const user = await User.findById(req.user.id).select('-password')
 		res.json(user)
 	} catch (error) {
-		console.log(err.messages)
+		console.log(error.messages)
 		res.status(500).send('Server Error')
 	}
 })
@@ -40,7 +40,7 @@ router.post(
 				},
 			}
 			jwt.sign(payload, config.get('jwtSecret'), { expiresIn: 360000 }, (err, token) => {
-				if (err) throw err
+				if (error) throw error
 				res.json({ token })
 			})
 		} catch (error) {
