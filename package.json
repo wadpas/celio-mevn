@@ -1,11 +1,13 @@
 {
-	"name": "snapple-react-node",
+	"name": "slice-react-node",
 	"version": "1.0.0",
 	"description": "Social network",
 	"main": "server.js",
 	"scripts": {
 		"start": "node server",
-		"server": "nodemon server"
+		"server": "nodemon server",
+		"client": "npm run dev --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
 	},
 	"author": "",
 	"license": "ISC",
