@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import logo from '../../img/logo.svg'
 
-export const Navbar = () => {
+const Navbar = () => {
 	return (
 		<nav className="navbar bg-dark">
 			<h1>
@@ -26,3 +26,5 @@ export const Navbar = () => {
 		</nav>
 	)
 }
+
+export default Navbar
