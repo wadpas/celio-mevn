@@ -5,6 +5,7 @@ const config = require('config')
 const { check, validationResult } = require('express-validator')
 const auth = require('../../middleware/auth')
 const Profile = require('../../models/Profile')
+const Post = require('../../models/Post')
 
 router.post(
 	'/',
@@ -66,9 +67,9 @@ router.post(
 	}
 )
 
-router.get('/', auth, async (req, res) => {
+router.get('/me', auth, async (req, res) => {
 	try {
-		const profile = await Profile.findOne().populate('user', ['name', 'avatar'])
+		const profile = await Profile.findOne({ user: req.user.id }).populate('user', ['name', 'avatar'])
 		res.json(profile)
 	} catch (error) {
 		console.log(error.message)
@@ -94,6 +95,7 @@ router.get('/user/:user_id', auth, async (req, res) => {
 
 router.delete('/', auth, async (req, res) => {
 	try {
+		await Post.deleteMany({ user: req.user.id })
 		await Profile.findOneAndDelete({ user: req.user.id })
 		await User.findOneAndDelete({ _id: req.user.id })
 		res.json({ msg: 'User deleted' })

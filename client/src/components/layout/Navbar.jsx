@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { logout } from '../../actions/auth'
-
 import logo from '../../img/logo.svg'
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {

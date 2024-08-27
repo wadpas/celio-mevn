@@ -1,20 +1,20 @@
 import { Fragment, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
+import { loadUser } from './actions/auth'
 import Navbar from './components/layout/Navbar'
 import Landing from './components/layout/Landing'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import Alert from './components/layout/Alert'
-import setAuthToken from './utils/setAuthToken'
-import { loadUser } from './actions/auth'
+import Dashboard from './components/dashboard/Dashboard'
+import CreateProfile from './components/profile-forms/CreateProfile'
+import EditProfile from './components/profile-forms/EditProfile'
+import AddExperience from './components/profile-forms/AddExperience'
+import AddEducation from './components/profile-forms/AddEducation'
+import PrivateRoute from './components/routing/PrivateRoute'
 import store from './store'
-
 import './App.css'
-
-if (localStorage.token) {
-	setAuthToken(localStorage.token)
-}
 
 const App = () => {
 	useEffect(() => {
@@ -26,24 +26,51 @@ const App = () => {
 			<Router>
 				<Fragment>
 					<Navbar />
-					<Routes>
-						<Route
-							exact
-							path="/"
-							element={<Landing />}
-						/>
-						<Route
-							exact
-							path="/register"
-							element={<Register />}
-						/>
-						<Route
-							exact
-							path="/login"
-							element={<Login />}
-						/>
-					</Routes>
-					<Alert />
+					<div className="container">
+						<Alert />
+						<Routes>
+							<Route
+								exact
+								path="/"
+								element={<Landing />}
+							/>
+							<Route
+								exact
+								path="/register"
+								element={<Register />}
+							/>
+							<Route
+								exact
+								path="/login"
+								element={<Login />}
+							/>
+							<Route
+								exact
+								path="/dashboard"
+								element={<PrivateRoute component={Dashboard} />}
+							/>
+							<Route
+								exact
+								path="/create-profile"
+								element={<PrivateRoute component={CreateProfile} />}
+							/>
+							<Route
+								exact
+								path="/edit-profile"
+								element={<PrivateRoute component={EditProfile} />}
+							/>
+							<Route
+								exact
+								path="/add-experience"
+								element={<PrivateRoute component={AddExperience} />}
+							/>
+							<Route
+								exact
+								path="/add-education"
+								element={<PrivateRoute component={AddEducation} />}
+							/>
+						</Routes>
+					</div>
 				</Fragment>
 			</Router>
 		</Provider>

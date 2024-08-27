@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-	--primary-color: #17a2b8;
+	--primary-color: #7fa1c3;
 	--dark-color: #343a40;
 	--light-color: #f4f4f4;
 	--danger-color: #dc3545;
@@ -40,7 +40,7 @@ img {
 	margin: auto;
 	overflow: hidden;
 	padding: 0 2rem;
-	margin-top: 6rem;
+	margin-top: 8rem;
 	margin-bottom: 3rem;
 }
 
@@ -222,6 +222,11 @@ img {
 	height: 1px;
 	background: #ccc;
 	margin: 1.5rem 0;
+}
+
+textarea {
+	font-family: inherit;
+	font-size: inherit;
 }
 
 /* Overlay */
