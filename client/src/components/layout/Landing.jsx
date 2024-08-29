@@ -7,7 +7,7 @@ const Landing = ({ isAuthenticated }) => {
 		return <Navigate to="/dashboard" />
 	}
 	return (
-		<section className="landing">
+		<section>
 			<div className="dark-overlay">
 				<div className="landing-inner">
 					<h1 className="x-large">SLICE</h1>

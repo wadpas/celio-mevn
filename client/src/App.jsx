@@ -13,12 +13,21 @@ import EditProfile from './components/profile-forms/EditProfile'
 import AddExperience from './components/profile-forms/AddExperience'
 import AddEducation from './components/profile-forms/AddEducation'
 import PrivateRoute from './components/routing/PrivateRoute'
+import setAuthToken from './utils/setAuthToken'
+import { LOGOUT } from './actions/types'
 import store from './store'
+
 import './App.css'
 
 const App = () => {
 	useEffect(() => {
+		if (localStorage.token) {
+			setAuthToken(localStorage.token)
+		}
 		store.dispatch(loadUser())
+		window.addEventListener('storage', () => {
+			if (!localStorage.token) store.dispatch({ type: LOGOUT })
+		})
 	}, [])
 
 	return (
