@@ -72,7 +72,7 @@ const EditProfile = ({ createProfile, getCurrentProfile, profile: { profile, loa
 
 	return (
 		<section>
-			<h1 className="large text-primary">Profile Create</h1>
+			<h1 className="large text-primary">My Profile</h1>
 			<p className="lead">
 				<i className="fas fa-user"></i> Let`s get some information to make your profile stand out
 			</p>
@@ -161,9 +161,8 @@ const EditProfile = ({ createProfile, getCurrentProfile, profile: { profile, loa
 						onClick={() => toggleSocialInputs(!displaySocialInputs)}
 						type="button"
 						className="btn btn-light">
-						Add Social Network Links
+						Social Network
 					</button>
-					<span>Optional</span>
 				</div>
 
 				{displaySocialInputs && (
