@@ -13,6 +13,7 @@ import EditProfile from './components/profile-forms/EditProfile'
 import AddExperience from './components/profile-forms/AddExperience'
 import AddEducation from './components/profile-forms/AddEducation'
 import PrivateRoute from './components/routing/PrivateRoute'
+import Profiles from './components/profiles/Profiles'
 import setAuthToken from './utils/setAuthToken'
 import { LOGOUT } from './actions/types'
 import store from './store'
@@ -52,6 +53,11 @@ const App = () => {
 								exact
 								path="/login"
 								element={<Login />}
+							/>
+							<Route
+								exact
+								path="/profiles"
+								element={<Profiles />}
 							/>
 							<Route
 								exact
