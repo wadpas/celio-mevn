@@ -17,6 +17,7 @@ import Profiles from './components/profiles/Profiles'
 import Profile from './components/profile/Profile'
 import Posts from './components/posts/Posts'
 import Post from './components/post/Post'
+import NotFound from './components/layout/NotFound'
 import setAuthToken from './utils/setAuthToken'
 import { LOGOUT } from './actions/types'
 import store from './store'
@@ -101,6 +102,10 @@ const App = () => {
 								exact
 								path="/posts/:id"
 								element={<PrivateRoute component={Post} />}
+							/>
+							<Route
+								path="/*"
+								element={<NotFound />}
 							/>
 						</Routes>
 					</div>
