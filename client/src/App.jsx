@@ -15,6 +15,7 @@ import AddEducation from './components/profile-forms/AddEducation'
 import PrivateRoute from './components/routing/PrivateRoute'
 import Profiles from './components/profiles/Profiles'
 import Profile from './components/profile/Profile'
+import Posts from './components/posts/Posts'
 import setAuthToken from './utils/setAuthToken'
 import { LOGOUT } from './actions/types'
 import store from './store'
@@ -35,7 +36,7 @@ const App = () => {
 	return (
 		<Provider store={store}>
 			<Router>
-				<Fragment>
+				<section>
 					<Navbar />
 					<div className="container">
 						<Alert />
@@ -90,9 +91,14 @@ const App = () => {
 								path="/add-education"
 								element={<PrivateRoute component={AddEducation} />}
 							/>
+							<Route
+								exact
+								path="/posts"
+								element={<PrivateRoute component={Posts} />}
+							/>
 						</Routes>
 					</div>
-				</Fragment>
+				</section>
 			</Router>
 		</Provider>
 	)

@@ -147,7 +147,7 @@ const CreateProfile = ({ createProfile }) => {
 				</div>
 
 				{displaySocialInputs && (
-					<Fragment>
+					<section>
 						<div className="form-group social-input">
 							<i className="fab fa-twitter fa-2x"></i>
 							<input
@@ -202,7 +202,7 @@ const CreateProfile = ({ createProfile }) => {
 								onChange={(e) => onChange(e)}
 							/>
 						</div>
-					</Fragment>
+					</section>
 				)}
 				<input
 					type="submit"

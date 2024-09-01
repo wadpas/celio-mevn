@@ -23,7 +23,7 @@ const Experience = ({ experience, deleteExperience }) => {
 	))
 
 	return (
-		<Fragment>
+		<section>
 			<h2 className="my-2">Experience Credentials</h2>
 			<table className="table">
 				<thead>
@@ -36,7 +36,7 @@ const Experience = ({ experience, deleteExperience }) => {
 				</thead>
 				<tbody>{experiences}</tbody>
 			</table>
-		</Fragment>
+		</section>
 	)
 }
 

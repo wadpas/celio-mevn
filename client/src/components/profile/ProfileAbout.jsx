@@ -10,11 +10,11 @@ const ProfileAbout = ({
 }) => (
 	<div className="profile-about bg-light p-2">
 		{bio && (
-			<Fragment>
+			<section>
 				<h2 className="text-primary">{name.trim().split(' ')[0]}s Bio</h2>
 				<p>{bio}</p>
 				<div className="line" />
-			</Fragment>
+			</section>
 		)}
 		<h2 className="text-primary">Skill Set</h2>
 		<div className="skills">

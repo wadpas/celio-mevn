@@ -17,11 +17,11 @@ const Profile = ({ getProfileById, profile: { profile }, auth }) => {
 	}, [getProfileById, id])
 
 	return (
-		<section className="container">
+		<section>
 			{profile === null ? (
 				<Spinner />
 			) : (
-				<Fragment>
+				<section>
 					<Link
 						to="/profiles"
 						className="btn btn-light">
@@ -40,14 +40,14 @@ const Profile = ({ getProfileById, profile: { profile }, auth }) => {
 						<div className="profile-exp bg-white p-2">
 							<h2 className="text-primary">Experience</h2>
 							{profile.experience.length > 0 ? (
-								<Fragment>
+								<section>
 									{profile.experience.map((experience) => (
 										<ProfileExperience
 											key={experience._id}
 											experience={experience}
 										/>
 									))}
-								</Fragment>
+								</section>
 							) : (
 								<h4>No experience credentials</h4>
 							)}
@@ -56,14 +56,14 @@ const Profile = ({ getProfileById, profile: { profile }, auth }) => {
 						<div className="profile-edu bg-white p-2">
 							<h2 className="text-primary">Education</h2>
 							{profile.education.length > 0 ? (
-								<Fragment>
+								<section>
 									{profile.education.map((education) => (
 										<ProfileEducation
 											key={education._id}
 											education={education}
 										/>
 									))}
-								</Fragment>
+								</section>
 							) : (
 								<h4>No education credentials</h4>
 							)}
@@ -71,7 +71,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth }) => {
 
 						{profile.githubusername && <ProfileGithub username={profile.githubusername} />}
 					</div>
-				</Fragment>
+				</section>
 			)}
 		</section>
 	)

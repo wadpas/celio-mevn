@@ -166,7 +166,7 @@ const EditProfile = ({ createProfile, getCurrentProfile, profile: { profile, loa
 				</div>
 
 				{displaySocialInputs && (
-					<Fragment>
+					<section>
 						<div className="form-group social-input">
 							<i className="fab fa-twitter fa-2x"></i>
 							<input
@@ -221,7 +221,7 @@ const EditProfile = ({ createProfile, getCurrentProfile, profile: { profile, loa
 								onChange={(e) => onChange(e)}
 							/>
 						</div>
-					</Fragment>
+					</section>
 				)}
 				<input
 					type="submit"
