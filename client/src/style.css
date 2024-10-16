@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: Play, 'Droid Sans', 'Helvetica Neue', sans-serif;
+	font-size: 15px;
+}
