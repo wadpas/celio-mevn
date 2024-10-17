@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 body {
-	font-family: Play, 'Droid Sans', 'Helvetica Neue', sans-serif;
+	max-width: 1280px;
+	margin: 0 auto;
+	font-family: Poppins, 'Droid Sans', 'Helvetica Neue', sans-serif;
 	font-size: 15px;
 }
