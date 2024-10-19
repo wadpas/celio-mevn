@@ -1,7 +1,7 @@
-<script setup></script>
-
 <template>
-	<main>
-		<TheWelcome />
-	</main>
+	<EmailView />
 </template>
+
+<script setup>
+	import EmailView from './EmailView.vue'
+</script>
