@@ -9,7 +9,7 @@
 		</div>
 		<div
 			v-show="openMenu"
-			class="absolute z-10 grid bg-white rounded-lg shadow w-80 right-2 top-16 justify-items-stretch">
+			class="absolute z-10 grid rounded-lg shadow w-80 right-2 top-16 justify-items-stretch">
 			<div
 				@click="openMenu = false"
 				class="p-2 justify-self-end hover:cursor-pointer">
