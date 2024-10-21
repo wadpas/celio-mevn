@@ -11,19 +11,17 @@
 			alt="celio" />
 	</div>
 
-	<div class="flex w-full mx-24">
-		<div class="flex items-center w-full bg-gray-100 rounded-lg input-width">
-			<TooltipIcon
-				:icon="MagnifyIcon"
-				text="Search" />
-			<input
-				placeholder="Search mail"
-				class="w-full h-10 placeholder-gray-900 bg-gray-100 border-transparent border-none outline-none focus:ring-0"
-				type="text" />
-			<TooltipIcon
-				:icon="TuneIcon"
-				text="Options" />
-		</div>
+	<div class="flex items-center w-full mx-24 rounded-lg bg-gray-50 input-width">
+		<TooltipIcon
+			:icon="MagnifyIcon"
+			text="Search" />
+		<input
+			placeholder="Search mail"
+			class="w-full h-10 placeholder-gray-900 border-transparent border-none outline-none bg-gray-50 focus:ring-0"
+			type="text" />
+		<TooltipIcon
+			:icon="TuneIcon"
+			text="Options" />
 	</div>
 
 	<div class="flex items-center">

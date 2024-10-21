@@ -4,7 +4,7 @@
 			<TopMenu />
 			<UserMenu />
 		</div>
-		<div class="flex p-3">
+		<div class="flex">
 			<SideMenu :toggleNewMessage="toggleNewMessage" />
 			<router-view />
 		</div>

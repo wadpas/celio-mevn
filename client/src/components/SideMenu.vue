@@ -2,12 +2,12 @@
 	<div class="mr-2">
 		<div
 			@click="toggleNewMessage"
-			class="flex items-center justify-center h-8 p-6 m-2 rounded-lg cursor-pointer bg-sky-50">
+			class="flex items-center justify-center h-8 p-6 m-2 text-white rounded-lg cursor-pointer bg-rose-500">
 			<PencilOutlineIcon />
 			<span class="text-sm ps-4">Compose</span>
 		</div>
 		<div class="my-5">
-			<div class="flex justify-between px-6 py-1 my-1 rounded-r-full cursor-pointer side-menu-item bg-slate-100">
+			<div class="flex justify-between px-6 py-1 my-1 bg-gray-100 rounded-r-full cursor-pointer side-menu-item">
 				<div class="flex items-center">
 					<InboxIcon :size="17" />
 					<div class="pl-4 text-sm font-semibold">Inbox</div>

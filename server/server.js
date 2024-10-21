@@ -3,10 +3,23 @@ const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const path = require('path')
+const bodyParser = require('body-parser')
+const { OAuth2Client } = require('google-auth-library')
 const app = express()
 
 app.use(cors())
+app.use(bodyParser.json({ limit: '50mb' }))
 app.use(express.json({ extended: false }))
+
+const client = new OAuth2Client('900554476490-r5ijn0hf558vg7l2glb53lu975jgthcl.apps.googleusercontent.com')
+
+app.post('/api/google-login', async (req, res) => {
+	const ticket = await client.verifyIdToken({
+		idToken: req.body.token,
+	})
+
+	res.status(200).json(ticket.getPayload())
+})
 
 app.use('/api/users', require('./routes/api/users'))
 app.use('/api/auth', require('./routes/api/auth'))

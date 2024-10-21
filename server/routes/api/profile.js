@@ -5,7 +5,7 @@ const config = require('config')
 const { check, validationResult } = require('express-validator')
 const auth = require('../../middleware/auth')
 const Profile = require('../../models/Profile')
-const Post = require('../../models/Post')
+const Post = require('../../models/Email')
 
 router.post(
 	'/',

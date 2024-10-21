@@ -1,5 +1,5 @@
 <template>
-	<div class="flex w-full">
+	<div class="flex w-full z-1">
 		<div class="w-full h-full ml-2 bg-white shadow-sm rounded-t-xl">
 			<div class="flex items-center justify-end px-4 my-3 text-xs text-gray-500">1-50 of 153</div>
 		</div>
